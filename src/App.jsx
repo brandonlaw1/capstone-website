@@ -102,7 +102,11 @@ const App = () => {
               </ul>
             </div>
             <div className="w-full">
-              <PicturePlaceholder className="h-80 lg:h-96" />
+              <img 
+                  src="/AI-Brain-2.png" 
+                  className="h-80 lg:h-96 w-full object-cover rounded-xl border border-slate-700" 
+                  alt="Capstone Hero" 
+                />
             </div>
           </div>
         </div>
