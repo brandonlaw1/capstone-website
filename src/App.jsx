@@ -119,14 +119,7 @@ const App = () => {
             <div className="lg:col-span-5 order-2 lg:order-1">
               {/* YouTube Embed Container */}
               <div className="w-full aspect-video lg:h-full lg:min-h-[400px] bg-slate-900 border border-slate-700 rounded-xl overflow-hidden">
-                <iframe 
-                  className="w-full h-full"
-                  src="https://youtu.be/fbVv0ZPk0fw" 
-                  title="YouTube video player" 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowFullScreen
-                ></iframe>
+                <iframe width="1455" height="818" src="https://www.youtube.com/embed/fbVv0ZPk0fw" title="seedance videos that caused an international incident, original Brad Pitt vs Tom Cruise fight etc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 {/* INSTRUCTIONS TO CHANGE VIDEO:
                   1. Go to the YouTube video you want to use.
                   2. Click 'Share' -> 'Embed'.
