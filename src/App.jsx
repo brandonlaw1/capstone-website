@@ -117,15 +117,17 @@ const App = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 order-2 lg:order-1">
-              {/* YouTube Embed Container */}
-              <div className="w-full aspect-video lg:h-full lg:min-h-[400px] bg-slate-900 border border-slate-700 rounded-xl overflow-hidden">
-                <iframe width="1455" height="818" src="https://www.youtube.com/embed/fbVv0ZPk0fw" title="seedance videos that caused an international incident, original Brad Pitt vs Tom Cruise fight etc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                {/* INSTRUCTIONS TO CHANGE VIDEO:
-                  1. Go to the YouTube video you want to use.
-                  2. Click 'Share' -> 'Embed'.
-                  3. Look at the code and copy the URL inside the src="" part (e.g., https://www.youtube.com/embed/VIDEO_ID).
-                  4. Replace the URL in the src="" above with your new URL.
-                */}
+              {/* Added flex items-center justify-center to center the iframe */}
+              <div className="w-full aspect-video lg:h-full lg:min-h-[400px] bg-slate-900 border border-slate-700 rounded-xl overflow-hidden flex items-center justify-center">
+                <iframe 
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/fbVv0ZPk0fw" 
+                  title="seedance videos that caused an international incident, original Brad Pitt vs Tom Cruise fight etc" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
             <div className="lg:col-span-7 order-1 lg:order-2 space-y-6">
