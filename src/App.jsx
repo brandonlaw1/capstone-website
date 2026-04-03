@@ -117,7 +117,23 @@ const App = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5 order-2 lg:order-1">
-              <PicturePlaceholder className="h-full min-h-[400px]" />
+              {/* YouTube Embed Container */}
+              <div className="w-full aspect-video lg:h-full lg:min-h-[400px] bg-slate-900 border border-slate-700 rounded-xl overflow-hidden">
+                <iframe 
+                  className="w-full h-full"
+                  src="https://youtu.be/fbVv0ZPk0fw" 
+                  title="YouTube video player" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowFullScreen
+                ></iframe>
+                {/* INSTRUCTIONS TO CHANGE VIDEO:
+                  1. Go to the YouTube video you want to use.
+                  2. Click 'Share' -> 'Embed'.
+                  3. Look at the code and copy the URL inside the src="" part (e.g., https://www.youtube.com/embed/VIDEO_ID).
+                  4. Replace the URL in the src="" above with your new URL.
+                */}
+              </div>
             </div>
             <div className="lg:col-span-7 order-1 lg:order-2 space-y-6">
               <h2 className="text-3xl font-bold text-white mb-6">The Discussion: Why This Matters</h2>
