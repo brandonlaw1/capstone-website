@@ -6,7 +6,9 @@ import {
   Image as ImageIcon,
   User,
   Home,
-  AlertTriangle
+  AlertTriangle,
+  Code2,
+  Cpu
 } from 'lucide-react';
 
 const App = () => {
@@ -23,13 +25,6 @@ const App = () => {
     setIsMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
-  const PicturePlaceholder = ({ className = "h-64", label = "Image Placement" }) => (
-    <div className={`w-full bg-slate-900 border border-slate-700 rounded-xl flex flex-col items-center justify-center text-slate-500 hover:border-blue-500/50 transition-colors ${className}`}>
-      <ImageIcon className="h-10 w-10 mb-2 opacity-50" />
-      <span className="text-sm font-medium tracking-wide uppercase">{label}</span>
-    </div>
-  );
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-blue-500/30">
@@ -103,7 +98,7 @@ const App = () => {
                 <div className="w-full">
                   <img 
                     src="/AI-Brain-2.png" 
-                    className="h-80 lg:h-96 w-full object-cover rounded-xl border border-slate-700" 
+                    className="h-80 lg:h-96 w-full object-cover rounded-xl border border-slate-700 shadow-2xl" 
                     alt="AI Brain Visualization"
                     onError={(e) => {
                       e.target.style.display = 'none';
@@ -135,20 +130,20 @@ const App = () => {
                   </p>
                 </div>
                 
-                {/* New Centered Image Placement Box */}
-                  <div className="pt-10 max-w-3xl mx-auto">
-                    <img 
-                      src="/CapstoneAd1.png" 
-                      alt="Deepfake Awareness Ad: Would you know the difference?"
-                      className="w-full h-auto rounded-xl border border-slate-700 shadow-2xl transition-transform hover:scale-[1.01]"
-                      onError={(e) => {
-                        e.target.style.display = 'none';
-                        e.target.insertAdjacentHTML('afterend', '<div class="h-64 bg-slate-900 rounded-xl flex items-center justify-center border border-slate-700 text-slate-500">Image Asset Not Found</div>');
-                      }}
-                    />
-                  </div>
+                {/* Integration of Asset: CapstoneAd1.png */}
+                <div className="pt-10 max-w-3xl mx-auto">
+                  <img 
+                    src="/CapstoneAd1.png" 
+                    alt="Deepfake Awareness Ad: Would you know the difference?"
+                    className="w-full h-auto rounded-xl border border-slate-700 shadow-2xl transition-transform duration-300 hover:scale-[1.01]"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.insertAdjacentHTML('afterend', '<div class="h-64 bg-slate-900 rounded-xl flex items-center justify-center border border-slate-700 text-slate-500 uppercase text-xs tracking-widest">Image Asset: CapstoneAd1.png Not Found</div>');
+                    }}
+                  />
+                </div>
 
-                <div className="flex flex-wrap justify-center gap-4 pt-6">
+                <div className="flex flex-wrap justify-center gap-4 pt-10">
                   <span className="px-3 py-1 bg-slate-900 border border-slate-800 rounded-full text-sm font-semibold text-slate-400">#Deepfakes</span>
                   <span className="px-3 py-1 bg-slate-900 border border-slate-800 rounded-full text-sm font-semibold text-slate-400">#Misinformation</span>
                   <span className="px-3 py-1 bg-slate-900 border border-slate-800 rounded-full text-sm font-semibold text-slate-400">#ThinkBeforeYouShare</span>
@@ -182,7 +177,7 @@ const App = () => {
                   <p className="text-slate-300 leading-relaxed">
                     Beyond the technical and legal issues, the core question is what "evidence" means now. If a video, voice note, or screenshot can be faked, can we still trust recordings and testimonies the way we used to?
                   </p>
-                  <div className="bg-slate-900 p-6 rounded-xl border border-slate-800 mt-6">
+                  <div className="bg-slate-900 p-6 rounded-xl border border-slate-800 mt-6 shadow-lg">
                     <h3 className="text-lg font-semibold text-blue-400 mb-2">Cultural Implications</h3>
                     <p className="text-sm text-slate-400 leading-relaxed">
                       American culture often values originality and the freedom to redefine oneself. However, that same mindset can make deception easier to justify or overlook. Deepfakes can feel both threatening and oddly familiar, revealing our society's complex relationship between truth and identity in the digital age.
@@ -194,39 +189,37 @@ const App = () => {
           </section>
         </main>
       ) : (
-        /* About Tab */
-        <main className="pt-32 pb-20 min-h-[80vh]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-8">
-                <div>
-                  <h2 className="text-blue-500 font-mono text-sm tracking-widest uppercase mb-2">About the Researcher</h2>
-                  <h1 className="text-4xl font-bold text-white mb-6">Background & Experience</h1>
-                  <div className="space-y-6 text-lg text-slate-300 leading-relaxed">
-                    <p>
-                      With a background in computer science and coding in multiple languages, I have experimented with AI tools enough to understand their potential in creating deepfakes. 
-                    </p>
-                    <p>
-                      Witnessing friends doubt real clips has fueled a fascination with machine learning, specifically the line drawn between using AI for creativity versus deception. My goal is to bridge the gap between technical understanding and societal impact.
-                    </p>
-                  </div>
+        /* About Tab - Reformatted centered layout */
+        <main className="pt-40 pb-24 min-h-[80vh]">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center space-y-12">
+              <div className="space-y-4">
+                <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono tracking-widest uppercase mb-4">
+                  Researcher Profile
                 </div>
-                
-                <div className="grid grid-cols-2 gap-6 pt-6">
-                  <div className="p-4 bg-slate-900 border border-slate-800 rounded-xl">
-                    <span className="block text-2xl font-bold text-white">CS</span>
-                    <span className="text-sm text-slate-500">Foundation</span>
-                  </div>
-                  <div className="p-4 bg-slate-900 border border-slate-800 rounded-xl">
-                    <span className="block text-2xl font-bold text-white">ML</span>
-                    <span className="text-sm text-slate-500">Exploration</span>
-                  </div>
-                </div>
+                <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Background & Experience</h1>
+                <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full"></div>
               </div>
-              <div className="relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl blur opacity-25"></div>
-                <div className="relative">
-                  <PicturePlaceholder className="h-96 lg:h-[500px]" />
+              
+              <div className="space-y-8 text-xl text-slate-300 leading-relaxed text-left max-w-2xl mx-auto">
+                <p>
+                  With a background in computer science and coding in multiple languages, I have experimented with AI tools enough to understand their potential in creating deepfakes. 
+                </p>
+                <p>
+                  Witnessing friends doubt real clips has fueled a fascination with machine learning, specifically the line drawn between using AI for creativity versus deception. My goal is to bridge the gap between technical understanding and societal impact.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-12">
+                <div className="p-8 bg-slate-900/50 border border-slate-800 rounded-2xl hover:border-blue-500/30 transition-colors group">
+                  <Code2 className="h-8 w-8 text-blue-500 mb-4 mx-auto group-hover:scale-110 transition-transform" />
+                  <h3 className="text-white font-bold text-lg mb-2">Computer Science</h3>
+                  <p className="text-slate-500 text-sm">Technical foundation in software development and multi-language logic.</p>
+                </div>
+                <div className="p-8 bg-slate-900/50 border border-slate-800 rounded-2xl hover:border-blue-500/30 transition-colors group">
+                  <Cpu className="h-8 w-8 text-blue-500 mb-4 mx-auto group-hover:scale-110 transition-transform" />
+                  <h3 className="text-white font-bold text-lg mb-2">Machine Learning</h3>
+                  <p className="text-slate-500 text-sm">Exploration of neural networks and the mechanics of synthetic media.</p>
                 </div>
               </div>
             </div>
@@ -235,16 +228,16 @@ const App = () => {
       )}
 
       {/* Footer */}
-      <footer className="bg-slate-950 py-12 border-t border-slate-900 text-center">
+      <footer className="bg-slate-950 py-16 border-t border-slate-900 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
-          <BrainCircuit className="h-10 w-10 text-slate-800 mb-6" />
-          <div className="space-y-2">
-            <p className="text-slate-400 font-medium">Capstone Proposal • Belmont High School</p>
+          <BrainCircuit className="h-12 w-12 text-slate-800 mb-8 opacity-50" />
+          <div className="space-y-3">
+            <p className="text-slate-400 font-semibold tracking-wide">Capstone Proposal • Belmont High School</p>
             <p className="text-slate-600 text-sm">Brandon Law &copy; 2026</p>
           </div>
-          <div className="mt-8 flex gap-6">
-            <button onClick={() => handleNavClick('home')} className="text-xs uppercase tracking-widest text-slate-500 hover:text-white transition-colors">Home</button>
-            <button onClick={() => handleNavClick('about')} className="text-xs uppercase tracking-widest text-slate-500 hover:text-white transition-colors">About</button>
+          <div className="mt-10 flex gap-8">
+            <button onClick={() => handleNavClick('home')} className="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 hover:text-blue-400 transition-colors">Home</button>
+            <button onClick={() => handleNavClick('about')} className="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 hover:text-blue-400 transition-colors">About</button>
           </div>
         </div>
       </footer>
