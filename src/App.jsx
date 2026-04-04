@@ -138,7 +138,7 @@ const App = () => {
                 {/* New Centered Image Placement Box */}
                   <div className="pt-10 max-w-3xl mx-auto">
                     <img 
-                      src="/CapstoneAd1.jpg" 
+                      src="/CapstoneAd1.png" 
                       alt="Deepfake Awareness Ad: Would you know the difference?"
                       className="w-full h-auto rounded-xl border border-slate-700 shadow-2xl transition-transform hover:scale-[1.01]"
                       onError={(e) => {
