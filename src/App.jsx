@@ -136,9 +136,17 @@ const App = () => {
                 </div>
                 
                 {/* New Centered Image Placement Box */}
-                <div className="pt-10 max-w-2xl mx-auto">
-                  <PicturePlaceholder className="h-64 lg:h-80" label="Verification Media Placeholder" />
-                </div>
+                  <div className="pt-10 max-w-3xl mx-auto">
+                    <img 
+                      src="/CapstoneAd1.jpg" 
+                      alt="Deepfake Awareness Ad: Would you know the difference?"
+                      className="w-full h-auto rounded-xl border border-slate-700 shadow-2xl transition-transform hover:scale-[1.01]"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.insertAdjacentHTML('afterend', '<div class="h-64 bg-slate-900 rounded-xl flex items-center justify-center border border-slate-700 text-slate-500">Image Asset Not Found</div>');
+                      }}
+                    />
+                  </div>
 
                 <div className="flex flex-wrap justify-center gap-4 pt-6">
                   <span className="px-3 py-1 bg-slate-900 border border-slate-800 rounded-full text-sm font-semibold text-slate-400">#Deepfakes</span>
