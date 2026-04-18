@@ -94,7 +94,7 @@ const App = () => {
                     Our Purpose
                   </h1>
                   <p className="text-lg text-slate-400 mb-6">
-                    Our objective is to equip the public, institutions, and courts with the knowledge needed to assess the legitimacy of digital media in an era of AI-driven fabrication.
+                    Our objective is to equip the public, institutions, and courts with the knowledge needed to assess the legitimacy of digital media in an era of AI-generated content.
                   </p>
                   <ul className="space-y-3 text-slate-300 border-l-2 border-blue-500/50 pl-4">
                     <li>• Educate technology users on the psychological and societal impacts of deepfakes.</li>
