@@ -244,7 +244,7 @@ const App = () => {
               
               <div className="space-y-8 text-xl text-slate-300 leading-relaxed text-left max-w-2xl mx-auto">
                 <p>
-                  With a background in computer science and coding in multiple languages, I have experimented with AI tools enough to understand their potential in creating deepfakes. 
+                  Founded by Brandon Law, a student at Belmont High School, Verify Before You Share was created to address the growing threat of synthetic media. With a background in computer science and coding in multiple languages, I have experimented with AI tools enough to understand their potential in creating deepfakes. 
                 </p>
                 <p>
                   Witnessing friends doubt real clips has fueled a fascination with machine learning, specifically the line drawn between using AI for creativity versus deception. My goal is to bridge the gap between technical understanding and societal impact.
@@ -263,6 +263,34 @@ const App = () => {
                   <p className="text-slate-500 text-sm">Exploration of neural networks and the mechanics of synthetic media.</p>
                 </div>
               </div>
+
+              {/* Contact Section */}
+              <div className="pt-20 mt-12 border-t border-slate-800/50 space-y-12">
+                <div className="space-y-4">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Contact Us</h2>
+                  <div className="w-16 h-1 bg-blue-500 mx-auto rounded-full"></div>
+                </div>
+
+                <div className="max-w-2xl mx-auto space-y-8">
+                  {/* Contact Image Placeholder */}
+                  <div className="w-full aspect-[21/9] bg-slate-900 border border-slate-700 rounded-xl flex flex-col items-center justify-center text-slate-500 shadow-xl group hover:border-blue-500/50 transition-colors cursor-pointer p-8">
+                    <ImageIcon className="h-12 w-12 text-slate-600 mb-4 group-hover:scale-110 transition-transform" />
+                    <span className="uppercase tracking-widest text-sm font-semibold">Contact Image Placeholder</span>
+                  </div>
+
+                  {/* Contact Information */}
+                  <div className="flex flex-col items-center justify-center space-y-4 bg-slate-900/30 p-8 rounded-xl border border-slate-800">
+                    <a href="mailto:blaw26@belmontschools.net" className="flex items-center space-x-3 text-blue-400 hover:text-blue-300 transition-colors">
+                      <Mail className="h-6 w-6" />
+                      <span className="text-lg font-medium tracking-wide">blaw26@belmontschools.net</span>
+                    </a>
+                    <p className="text-slate-400 font-medium tracking-wide">
+                      Follow us on Twitter <span className="text-slate-200">@VerifyBeforeYouShare</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </main>
