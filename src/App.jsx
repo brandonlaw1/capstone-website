@@ -278,7 +278,7 @@ const App = () => {
                 <div className="max-w-2xl mx-auto space-y-8">
                   {/* Contact Image Placeholder */}
                   <img 
-                    src="/contact.png" 
+                    src="/ContactUs.png" 
                     alt="Contact Us" 
                     className="w-full h-auto rounded-xl border border-slate-700 shadow-xl"
                     onError={(e) => {
