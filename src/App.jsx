@@ -8,7 +8,11 @@ import {
   Home,
   AlertTriangle,
   Code2,
-  Cpu
+  Cpu,
+  Video,
+  LayoutTemplate,
+  Megaphone,
+  Mail
 } from 'lucide-react';
 
 const App = () => {
@@ -17,6 +21,7 @@ const App = () => {
 
   const navigation = [
     { name: 'Home', id: 'home', icon: Home },
+    { name: 'Campaign', id: 'campaign', icon: Megaphone },
     { name: 'About', id: 'about', icon: User },
   ];
 
@@ -34,7 +39,7 @@ const App = () => {
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center space-x-2 cursor-pointer" onClick={() => handleNavClick('home')}>
               <BrainCircuit className="h-6 w-6 text-blue-500" />
-              <span className="text-xl font-bold tracking-tight text-white">Capstone: Deepfakes & Truth</span>
+              <span className="text-xl font-bold tracking-tight text-white">Verify Before You Share</span>
             </div>
             
             <div className="hidden md:flex space-x-8">
@@ -85,14 +90,14 @@ const App = () => {
                     Brandon Law
                   </div>
                   <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6 leading-tight">
-                    How Deepfakes Created by AI Challenge Truth, Evidence, and Credibility.
+                    Our Purpose
                   </h1>
                   <p className="text-lg text-slate-400 mb-6">
-                    How can people, courts, and institutions determine the legitimacy of videos and audio when they can be fabricated using artificial intelligence?
+                    Our objective is to equip the public, courts, and institutions with the knowledge necessary to determine the legitimacy of digital media in an era of AI fabrication.
                   </p>
                   <ul className="space-y-3 text-slate-300 border-l-2 border-blue-500/50 pl-4">
-                    <li>• How will technology users be affected by the rise in deepfakes?</li>
-                    <li>• How do American ideas of imitation and self-reinvention explain the origin and impact of deepfakes?</li>
+                    <li>• Educate technology users on the psychological and societal impacts of synthetic media.</li>
+                    <li>• Establish a standardized digital verification protocol to protect truth, evidence, and credibility.</li>
                   </ul>
                 </div>
                 <div className="w-full">
@@ -178,15 +183,54 @@ const App = () => {
                     Beyond the technical and legal issues, the core question is what "evidence" means now. If a video, voice note, or screenshot can be faked, can we still trust recordings and testimonies the way we used to?
                   </p>
                   <div className="bg-slate-900 p-6 rounded-xl border border-slate-800 mt-6 shadow-lg">
-                    <h3 className="text-lg font-semibold text-blue-400 mb-2">Cultural Implications</h3>
+                    <h3 className="text-lg font-semibold text-blue-400 mb-2">Media Disclaimer</h3>
                     <p className="text-sm text-slate-400 leading-relaxed">
-                      American culture often values originality and the freedom to redefine oneself. However, that same mindset can make deception easier to justify or overlook. Deepfakes can feel both threatening and oddly familiar, revealing our society's complex relationship between truth and identity in the digital age.
+                      This embedded video is an external example provided for context and is not my original work.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </section>
+        </main>
+      ) : activeTab === 'campaign' ? (
+        /* Campaign Tab - Showcasing Remaining Deliverables */
+        <main className="pt-32 pb-24 min-h-[80vh]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="space-y-32">
+              
+              {/* Campaign Element: Brochure */}
+              <div className="max-w-4xl mx-auto space-y-6">
+                <h2 className="text-3xl font-bold text-white text-center">Our Brochure</h2>
+                <div className="w-full aspect-[4/3] bg-slate-900 border border-slate-700 rounded-xl flex flex-col items-center justify-center text-slate-500 shadow-xl group hover:border-blue-500/50 transition-colors cursor-pointer p-8">
+                  <LayoutTemplate className="h-16 w-16 text-slate-600 mb-4 group-hover:scale-110 transition-transform" />
+                  <span className="uppercase tracking-widest text-sm font-semibold">Brochure Asset Placeholder</span>
+                  <span className="text-xs text-slate-600 mt-2 text-center">Insert brochure graphic here</span>
+                </div>
+              </div>
+
+              {/* Campaign Element: :15 Social Video Ad */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="order-2 lg:order-1 space-y-6">
+                  <div className="flex items-center space-x-3 mb-2">
+                    <Video className="h-6 w-6 text-blue-500" />
+                    <h2 className="text-3xl font-bold text-white">Informational Video</h2>
+                  </div>
+                </div>
+                <div className="order-1 lg:order-2">
+                  <div className="w-full aspect-video bg-slate-900 border border-slate-700 rounded-xl flex flex-col items-center justify-center text-slate-500 shadow-xl overflow-hidden relative group">
+                    {/* Embed Custom Video Here - Replace the placeholder div below with your iframe embed code */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-900 p-6">
+                      <Video className="h-12 w-12 text-slate-600 mb-4 group-hover:scale-110 transition-transform" />
+                      <span className="uppercase tracking-widest text-sm font-semibold text-center mb-2">Embed Custom :15 Video Here</span>
+                      <span className="text-xs text-slate-600 font-mono text-center break-all">&lt;iframe src="YOUR_VIDEO_URL"&gt;&lt;/iframe&gt;</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
         </main>
       ) : (
         /* About Tab - Reformatted centered layout */
@@ -234,6 +278,7 @@ const App = () => {
           </div>
           <div className="mt-10 flex gap-8">
             <button onClick={() => handleNavClick('home')} className="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 hover:text-blue-400 transition-colors">Home</button>
+            <button onClick={() => handleNavClick('campaign')} className="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 hover:text-blue-400 transition-colors">Campaign</button>
             <button onClick={() => handleNavClick('about')} className="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 hover:text-blue-400 transition-colors">About</button>
           </div>
         </div>
