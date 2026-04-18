@@ -200,14 +200,7 @@ const App = () => {
             <div className="space-y-32">
               
               {/* Campaign Element: Brochure */}
-              <div className="max-w-4xl mx-auto space-y-6">
-                <h2 className="text-3xl font-bold text-white text-center">Our Brochure</h2>
-                <div className="w-full aspect-[4/3] bg-slate-900 border border-slate-700 rounded-xl flex flex-col items-center justify-center text-slate-500 shadow-xl group hover:border-blue-500/50 transition-colors cursor-pointer p-8">
-                  <LayoutTemplate className="h-16 w-16 text-slate-600 mb-4 group-hover:scale-110 transition-transform" />
-                  <span className="uppercase tracking-widest text-sm font-semibold">Brochure Asset Placeholder</span>
-                  <span className="text-xs text-slate-600 mt-2 text-center">Insert brochure graphic here</span>
-                </div>
-              </div>
+              <img src="/brochure.png" alt="Our Brochure" className="w-full h-auto rounded-xl shadow-xl" />
 
               {/* Campaign Element: :15 Social Video Ad */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
