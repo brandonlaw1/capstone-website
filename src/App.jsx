@@ -12,7 +12,8 @@ import {
   Video,
   LayoutTemplate,
   Megaphone,
-  Mail
+  Mail,
+  Radio
 } from 'lucide-react';
 
 const App = () => {
@@ -93,7 +94,7 @@ const App = () => {
                     Our Purpose
                   </h1>
                   <p className="text-lg text-slate-400 mb-6">
-                    Our objective is to equip the public, courts, and institutions with the knowledge necessary to determine the legitimacy of digital media in an era of AI fabrication.
+                    Our objective is to equip the public, institutions, and courts with the knowledge necessary to determine the legitimacy of digital media in an era of AI fabrication.
                   </p>
                   <ul className="space-y-3 text-slate-300 border-l-2 border-blue-500/50 pl-4">
                     <li>• Educate technology users on the psychological and societal impacts of synthetic media.</li>
@@ -175,17 +176,11 @@ const App = () => {
                   </div>
                 </div>
                 <div className="lg:col-span-7 order-1 lg:order-2 space-y-6">
-                  <h2 className="text-3xl font-bold text-white mb-6">The Discussion: Why This Matters</h2>
-                  <p className="text-slate-300 leading-relaxed">
-                    If anyone's face or voice can be forged using artificial intelligence, eyewitness videos, news clips, and even personal memories become debatable. As a result, this threatens journalism, elections, and the justice system. 
-                  </p>
-                  <p className="text-slate-300 leading-relaxed">
-                    Beyond the technical and legal issues, the core question is what "evidence" means now. If a video, voice note, or screenshot can be faked, can we still trust recordings and testimonies the way we used to?
-                  </p>
+                  <h2 className="text-3xl font-bold text-white mb-6">Example of Deepfakes</h2>
                   <div className="bg-slate-900 p-6 rounded-xl border border-slate-800 mt-6 shadow-lg">
                     <h3 className="text-lg font-semibold text-blue-400 mb-2">Media Disclaimer</h3>
                     <p className="text-sm text-slate-400 leading-relaxed">
-                      This embedded video is an external example provided for context and is not my original work.
+                      This video is an external example provided for context and is not my original work.
                     </p>
                   </div>
                 </div>
@@ -213,21 +208,24 @@ const App = () => {
                 />
               </div>
 
-              {/* Campaign Element: :15 Social Video Ad */}
+              {/* Campaign Element: Radio Broadcast */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="order-2 lg:order-1 space-y-6">
                   <div className="flex items-center space-x-3 mb-2">
-                    <Video className="h-6 w-6 text-blue-500" />
-                    <h2 className="text-3xl font-bold text-white">Informational Video</h2>
+                    <Radio className="h-6 w-6 text-blue-500" />
+                    <h2 className="text-3xl font-bold text-white">Radio Broadcast</h2>
                   </div>
+                  <p className="text-slate-300 leading-relaxed text-lg">
+                    Tune in to learn more about why we must think critically and verify digital content in the age of AI.
+                  </p>
                 </div>
                 <div className="order-1 lg:order-2">
                   <div className="w-full aspect-video bg-slate-900 border border-slate-700 rounded-xl flex flex-col items-center justify-center text-slate-500 shadow-xl overflow-hidden relative group">
-                    {/* Embed Custom Video Here - Replace the placeholder div below with your iframe embed code */}
+                    {/* Embed Custom Audio Here - Replace the placeholder div below with your SoundCloud iframe embed code */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-900 p-6">
-                      <Video className="h-12 w-12 text-slate-600 mb-4 group-hover:scale-110 transition-transform" />
-                      <span className="uppercase tracking-widest text-sm font-semibold text-center mb-2">Embed Custom :15 Video Here</span>
-                      <span className="text-xs text-slate-600 font-mono text-center break-all">&lt;iframe src="YOUR_VIDEO_URL"&gt;&lt;/iframe&gt;</span>
+                      <Radio className="h-12 w-12 text-slate-600 mb-4 group-hover:scale-110 transition-transform" />
+                      <span className="uppercase tracking-widest text-sm font-semibold text-center mb-2">Embed SoundCloud Audio Here</span>
+                      <span className="text-xs text-slate-600 font-mono text-center break-all">&lt;iframe src="YOUR_SOUNDCLOUD_URL"&gt;&lt;/iframe&gt;</span>
                     </div>
                   </div>
                 </div>
