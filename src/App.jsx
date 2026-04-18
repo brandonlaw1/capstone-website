@@ -222,17 +222,7 @@ const App = () => {
                 <div className="order-1 lg:order-2">
                   <div className="w-full aspect-video bg-slate-900 border border-slate-700 rounded-xl flex flex-col items-center justify-center text-slate-500 shadow-xl overflow-hidden relative group">
                     {/* Embed Custom Audio Here - Replace the placeholder div below with your SoundCloud iframe embed code */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-900 p-6">
-                      <Radio className="h-12 w-12 text-slate-600 mb-4 group-hover:scale-110 transition-transform" />
-                      <span className="uppercase tracking-widest text-sm font-semibold text-center mb-2">Embed SoundCloud Audio Here</span>
-                      <span className="text-xs text-slate-600 font-mono text-center break-all">&lt;iframe src="YOUR_SOUNDCLOUD_URL"&gt;&lt;/iframe&gt;</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-          </div>
+                    <iframe width="100%" height="300" scrolling="no" frameBorder="0" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2304729578&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/brandon-law-378941928" title="Brandon Law" target="_blank" style="color: #cccccc; text-decoration: none;">Brandon Law</a> · <a href="https://soundcloud.com/brandon-law-378941928/seeing-isnt-believing" title="Why Seeing Isn’t Believing" target="_blank" style="color: #cccccc; text-decoration: none;">Why Seeing Isn’t Believing</a></div>
         </main>
       ) : (
         /* About Tab - Reformatted centered layout */
