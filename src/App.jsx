@@ -98,7 +98,7 @@ const App = () => {
                   </p>
                   <ul className="space-y-3 text-slate-300 border-l-2 border-blue-500/50 pl-4">
                     <li>• Educate technology users on the psychological and societal impacts of deepfakes.</li>
-                    <li>• Establish a standardized digital verification protocol to protect truth, evidence, and credibility.</li>
+                    <li>• Establish a verification protocol to protect truth, evidence, and credibility.</li>
                   </ul>
                 </div>
                 <div className="w-full">
