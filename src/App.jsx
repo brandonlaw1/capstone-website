@@ -313,7 +313,7 @@ const App = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
           <BrainCircuit className="h-12 w-12 text-slate-800 mb-8 opacity-50" />
           <div className="space-y-3">
-            <p className="text-slate-400 font-semibold tracking-wide">Capstone Proposal • Belmont High School</p>
+            <p className="text-slate-400 font-semibold tracking-wide">Verify Before You Share • Belmont High School</p>
             <p className="text-slate-600 text-sm">Brandon Law &copy; 2026</p>
           </div>
           <div className="mt-10 flex gap-8">
