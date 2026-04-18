@@ -94,11 +94,11 @@ const App = () => {
                     Our Purpose
                   </h1>
                   <p className="text-lg text-slate-400 mb-6">
-                    Our objective is to equip the public, institutions, and courts with the knowledge necessary to determine the legitimacy of digital media in an era of AI fabrication.
+                    Our objective is to equip the public, institutions, and courts with the knowledge needed to assess the legitimacy of digital media in an era of AI-driven fabrication.
                   </p>
                   <ul className="space-y-3 text-slate-300 border-l-2 border-blue-500/50 pl-4">
-                    <li>• Educate technology users on the psychological and societal impacts of synthetic media.</li>
-                    <li>• Establish a standardized digital verification protocol to protect truth, evidence, and credibility.</li>
+                    <li>• Educate technology users on the psychological and societal impacts of deepfakes.</li>
+                    <li>• Establish a digital verification protocol to protect truth, evidence, and credibility.</li>
                   </ul>
                 </div>
                 <div className="w-full">
@@ -180,7 +180,7 @@ const App = () => {
                   <div className="bg-slate-900 p-6 rounded-xl border border-slate-800 mt-6 shadow-lg">
                     <h3 className="text-lg font-semibold text-blue-400 mb-2">Media Disclaimer</h3>
                     <p className="text-sm text-slate-400 leading-relaxed">
-                      This video is an external example provided for context and is not my original work.
+                      This video is included as an example and is not my original work.
                     </p>
                   </div>
                 </div>
