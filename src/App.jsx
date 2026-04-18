@@ -200,7 +200,18 @@ const App = () => {
             <div className="space-y-32">
               
               {/* Campaign Element: Brochure */}
-              <img src="/brochure.png" alt="Our Brochure" className="w-full h-auto rounded-xl shadow-xl" />
+              <div className="max-w-3xl mx-auto flex flex-col items-center">
+                <h2 className="text-3xl font-bold text-white text-center mb-10">Our Brochure</h2>
+                <img 
+                  src="/brochure.png" 
+                  alt="Our Brochure" 
+                  className="w-full max-w-lg h-auto rounded-xl border border-slate-700 shadow-xl"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.insertAdjacentHTML('afterend', '<div class="w-full max-w-lg aspect-[4/3] bg-slate-900 rounded-xl flex items-center justify-center border border-slate-700 text-slate-500 uppercase text-xs tracking-widest text-center px-4">Brochure Asset Not Found. Check File Path.</div>');
+                  }}
+                />
+              </div>
 
               {/* Campaign Element: :15 Social Video Ad */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -266,10 +277,15 @@ const App = () => {
 
                 <div className="max-w-2xl mx-auto space-y-8">
                   {/* Contact Image Placeholder */}
-                  <div className="w-full aspect-[21/9] bg-slate-900 border border-slate-700 rounded-xl flex flex-col items-center justify-center text-slate-500 shadow-xl group hover:border-blue-500/50 transition-colors cursor-pointer p-8">
-                    <ImageIcon className="h-12 w-12 text-slate-600 mb-4 group-hover:scale-110 transition-transform" />
-                    <span className="uppercase tracking-widest text-sm font-semibold">Contact Image Placeholder</span>
-                  </div>
+                  <img 
+                    src="/contact.png" 
+                    alt="Contact Us" 
+                    className="w-full h-auto rounded-xl border border-slate-700 shadow-xl"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.insertAdjacentHTML('afterend', '<div class="w-full aspect-[21/9] bg-slate-900 rounded-xl flex items-center justify-center border border-slate-700 text-slate-500 uppercase text-xs tracking-widest text-center px-4">Contact Asset Not Found. Check File Path.</div>');
+                    }}
+                  />
 
                   {/* Contact Information */}
                   <div className="flex flex-col items-center justify-center space-y-4 bg-slate-900/30 p-8 rounded-xl border border-slate-800">
